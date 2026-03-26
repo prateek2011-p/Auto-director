@@ -83,3 +83,6 @@ It can be useful for:
 So in summary, Auto-Director converts a single-line idea into a structured, visually supported 3-act storyboard with scenes and shot breakdowns in a cinematic feed interface.
 
 Thank you.
+## 🎥 Demo Video
+
+Watch here: https://drive.google.com/file/d/1jMKPqi603jPoDPJ_rpnkUWe6EJm4jcLx/view?usp=sharing
