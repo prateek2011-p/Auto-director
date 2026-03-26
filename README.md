@@ -79,7 +79,7 @@ It can be useful for:
 - content creators
 - pre-visualization workflows
 
-##closing
+## closing
 So in summary, Auto-Director converts a single-line idea into a structured, visually supported 3-act storyboard with scenes and shot breakdowns in a cinematic feed interface.
 
 Thank you.
