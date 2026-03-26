@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07111f;
+  --foreground: #f7f1e8;
+  --surface: rgba(10, 22, 39, 0.72);
+  --surface-strong: rgba(8, 18, 32, 0.92);
+  --line: rgba(255, 241, 224, 0.14);
+  --accent: #ff7a18;
+  --accent-soft: #ffc266;
+  --cool: #74d3ff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  background-image:
+    radial-gradient(circle at top, rgba(116, 211, 255, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(255, 122, 24, 0.18), transparent 24%),
+    linear-gradient(180deg, #07111f 0%, #08192d 52%, #09101c 100%);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(255, 194, 102, 0.35);
+  color: #fff7ed;
+}
+
+.film-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 3px 3px, 4px 4px;
+}
+
+.display-font {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.glass-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.image-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 20%, rgba(4, 10, 18, 0.66) 100%);
+  pointer-events: none;
+}
