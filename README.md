@@ -1,9 +1,8 @@
-# Auto-Director Demo Script
-
-Hello everyone, this is our project, **Auto-Director**.
+# Auto-Director-ai cinematic storyboard generator
 
 Auto-Director is an AI-powered system that takes a **single-line story idea** and transforms it into a **fully structured 3-act cinematic storyboard**. The goal is to reduce friction for storytellers and creators by turning a simple idea into something that feels much closer to a film-ready visual plan.
 
+live link -https://auto-director-gcgl.vercel.app/
 ## Problem We Solved
 
 A lot of people have strong creative ideas, but they struggle to convert them into structured cinematic elements like:
@@ -67,26 +66,6 @@ This project is built using:
 - **Google Gemini API** for story generation
 - **Unsplash API** for visual image matching
 
-## Special Handling
-
-We also handled reliability issues in the system.
-
-If Gemini quota is unavailable, the app can still continue working using a fallback storyboard generation flow, so the product remains usable end-to-end.
-
-That means the application is designed to be practical, stable, and demo-ready.
-
-## Demo Flow
-
-Now I’ll quickly show the product.
-
-1. I enter a one-line story idea
-2. I click **Generate Feed**
-3. The app generates the structured cinematic storyboard
-4. We can scroll through the acts, scenes, and shots
-5. Each shot contains framing, narrative context, and a visual reference
-
-This gives creators a much clearer understanding of how their idea can translate into a film-ready sequence.
-
 ## Why This Matters
 
 Auto-Director helps bridge the gap between:
@@ -100,8 +79,7 @@ It can be useful for:
 - content creators
 - pre-visualization workflows
 
-## Closing
-
+##closing
 So in summary, Auto-Director converts a single-line idea into a structured, visually supported 3-act storyboard with scenes and shot breakdowns in a cinematic feed interface.
 
 Thank you.
