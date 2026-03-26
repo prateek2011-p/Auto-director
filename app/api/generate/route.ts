@@ -45,6 +45,23 @@ type GenerationResponse = {
   image_source: 'unsplash';
 };
 
+type UnsplashPhoto = {
+  alt_description?: string | null;
+  urls?: {
+    regular?: string;
+  };
+  user?: {
+    name?: string;
+    links?: {
+      html?: string;
+    };
+  };
+};
+
+type UnsplashSearchResponse = {
+  results?: UnsplashPhoto[];
+};
+
 const DEFAULT_FRAMINGS = [
   'Wide Shot',
   'Medium Shot',
@@ -376,9 +393,9 @@ async function fetchUnsplashImage(query: string, fallbackAlt: string) {
       throw new Error(`Unsplash request failed (${response.status}): ${details}`);
     }
 
-    const data = await response.json();
-    const results = Array.isArray(data?.results) ? data.results : [];
-    const first = results.find((item) => item?.urls?.regular);
+    const data = (await response.json()) as UnsplashSearchResponse;
+    const results: UnsplashPhoto[] = Array.isArray(data?.results) ? data.results : [];
+    const first = results.find((item: UnsplashPhoto) => item?.urls?.regular);
 
     if (!first?.urls?.regular) {
       continue;
